@@ -1,4 +1,4 @@
-package com.clean.builder.patterns;
+package com.clean.builder.patterns.fluent;
 
 public class FluentDO {
 
