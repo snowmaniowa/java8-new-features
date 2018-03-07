@@ -1,4 +1,4 @@
-package com.santha.examples;
+package com.santha.examples.lambda;
 
 public interface SoccerInterface {
 	

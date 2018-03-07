@@ -2,8 +2,8 @@ package com.clean.builder.patterns;
 
 public class FluentDO {
 
+	private int id;
 	private String firstName;
-	private String middleName;
 	private String lastName;
 	private String age;
 	private String occupation;
@@ -17,13 +17,13 @@ public class FluentDO {
 	}
 
 	//2. All setters must return this
-	public FluentDO setFirstName(String firstName) {
-		this.firstName = firstName;
+	public FluentDO setId(int id) {
+		this.id = id;
 		return this;
 	}
 
-	public FluentDO setMiddleName(String middleName) {
-		this.middleName = middleName;
+	public FluentDO setFirstName(String firstName) {
+		this.firstName = firstName;
 		return this;
 	}
 
@@ -46,10 +46,6 @@ public class FluentDO {
 		return firstName;
 	}
 
-	public String getMiddleName() {
-		return middleName;
-	}
-
 	public String getLastName() {
 		return lastName;
 	}
@@ -62,13 +58,34 @@ public class FluentDO {
 		return occupation;
 	}
 
-	public void printValues() {
-
-		System.out.println("" + getFirstName());
-		System.out.println("" + getLastName());
-		System.out.println("" + getMiddleName());
-		System.out.println("" + getAge());
-		System.out.println("" + getOccupation());
+	public int getId() {
+		return id;
 	}
+
+	public void printValues() {
+		System.out.println("Id: " + getId());
+		System.out.println("FName: " + getFirstName());
+		System.out.println("LName: " + getLastName());		
+		System.out.println("Age: " + getAge());
+		System.out.println("Occupation: " + getOccupation());
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+	    
+		if (obj == null) {
+			return false;
+		}
+    
+	    if (!(obj instanceof FluentDO)){
+	    	return false;
+	    }
+	        
+	    if (obj == this){
+	    	return true;
+	    }
+	        
+	    return this.getId() == ((FluentDO) obj).getId();
+	}	
 		
 }
