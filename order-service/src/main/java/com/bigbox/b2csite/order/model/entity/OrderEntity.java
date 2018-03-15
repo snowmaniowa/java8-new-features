@@ -4,16 +4,41 @@ import java.util.Date;
 import java.util.LinkedList;
 import java.util.List;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.persistence.SequenceGenerator;
+
+@Entity
 public class OrderEntity {
 
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private long id;
+
+	@Column(nullable=false)
 	private String orderNumber;
+
+	@Column
 	private String orderLabel;
+	
+	@Column
 	private long customerId;
+	
+	@Column
 	private long shippingAddressId;
+	
+	@Column
 	private long billingAddressId;
+
+	@Column
 	private Date completionDate;
-	private List<OrderItemEntity> orderItemList = new LinkedList<OrderItemEntity>();
+	
+	@OneToMany
+	private List<OrderItemEntity> orderItemList = new LinkedList<>();
 
 	public long getId() {
 		return id;

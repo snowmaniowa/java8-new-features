@@ -3,13 +3,30 @@ package com.bigbox.b2csite.order.model.entity;
 import java.math.BigDecimal;
 import java.util.Date;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+
+@Entity
 public class OrderItemEntity {
 
+	@Id
 	private long id;
+
+	@Column(nullable=false)
 	private String sku;
+
+	@Column(nullable=false)
 	private int quantity;
+
+	@Column(nullable=false)
 	private BigDecimal sellingPrice;
+
+	@Column(nullable=false)
 	private Date addedToOrderDateTime;
+
+	@ManyToOne
 	private OrderEntity owningOrder;
 
 	public long getId() {
