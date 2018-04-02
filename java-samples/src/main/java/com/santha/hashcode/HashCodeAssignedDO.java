@@ -1,6 +1,4 @@
-package com.santha.examples;
-
-import com.clean.builder.patterns.fluent.FluentDO;
+package com.santha.hashcode;
 
 public class HashCodeAssignedDO {
 

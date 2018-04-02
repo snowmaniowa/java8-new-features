@@ -1,4 +1,4 @@
-package com.santha.examples.lambda;
+package com.santha.lambda;
 
 public interface TennisInterface {
 	

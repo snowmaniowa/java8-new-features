@@ -1,6 +1,6 @@
-package com.santha.examples;
+package com.santha.hashcode;
 
-import com.clean.builder.patterns.fluent.FluentDO;
+import com.santha.pattern.builder.fluent.FluentDO;
 
 public class EqualsHashCode {
 

@@ -1,4 +1,4 @@
-package com.santha.examples;
+package com.santha.hashcode;
 
 import java.util.HashMap;
 import java.util.Hashtable;
@@ -48,10 +48,10 @@ public class HashMapTableUsage {
 
         System.out.println("-----------Hash map-----------");
         HashMap<Integer,String> hMap=new HashMap<Integer,String>();
-        hMap.put(33,"Roger");
-        hMap.put(34,"Roger");  // hash map allows duplicate values
-        hMap.put(35,"Santha");
-        hMap.put(36,"Perian");
+        hMap.put(44,"Roger");
+        hMap.put(33,"Roger");  // hash map allows duplicate values
+        hMap.put(99,"Santha");
+        hMap.put(22,"Perian");
         for (Map.Entry m:hMap.entrySet()) {
             System.out.println(m.getKey()+" "+m.getValue());
         }

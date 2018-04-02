@@ -1,4 +1,4 @@
-package com.clean.builder.patterns.fluent;
+package com.santha.pattern.builder.fluent;
 
 public class FluentInterfacePattern {
 
